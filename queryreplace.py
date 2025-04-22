@@ -19,9 +19,7 @@ def convert(listUrl, payload):
         
     for url in urls:
         url = url.strip()
-        if "=" not in url:
-            pass
-        else:
+        if "=" in url:
             urlP = urllib.parse.urlparse(url)
             url_query = urlP.query
             qs = urllib.parse.parse_qsl(url_query)
